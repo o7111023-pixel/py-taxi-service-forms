@@ -8,7 +8,6 @@ from .models import Driver, Car, Manufacturer
 from .forms import CarForm, ManufacturerForm
 
 
-
 @login_required
 def index(request):
     """View function for the home page of the site."""
