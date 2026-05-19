@@ -1,18 +1,16 @@
 {% extends "base.html" %}
 
-{% load crispy_forms_tags %}
-
 {% block content %}
-  <h1>{{ object|yesno:"Update,Create" }} manufacturer</h1>
+  <h1>Delete car?</h1>
 
-  <form method="post" novalidate>
+  <p>Are you sure you want to delete "{{ car }}"?</p>
+
+  <form method="post">
     {% csrf_token %}
 
-    {{ form|crispy }}
-
     <input type="submit"
-           value="Submit"
-           class="btn btn-primary">
+           value="Yes, delete"
+           class="btn btn-danger">
 
     <button type="button"
             onclick="window.history.back();"
